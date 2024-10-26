@@ -34,7 +34,7 @@ solve with Iterative Deepening Search (IDS),  Hill Climbing (HC), and Genetic Al
 - **Neighbor state**: swapping the position of two queens in the current state
 - **Evaluate function**: calculates the fitness of a given state by counting the number of diagonal collisions between queens. The maximum fitness is \(n \times (n - 1) / 2\), representing the number of non-attacking pairs of queens.
 - **Idea**: iteratively explores neighboring states and moves to the neighbor with the highest fitness if it has a higher fitness than the current state. The process stops when no better neighbors are found.
-- **Run time**: 30, as required.
+
 
 ### GA
 - **Parameters**:
@@ -54,5 +54,3 @@ solve with Iterative Deepening Search (IDS),  Hill Climbing (HC), and Genetic Al
   The GA is implemented based on the method and parameters mentioned in the paper. Permutations are used to represent the positions of queens on the chessboard, and ten random permutations are generated as the initial population.  
   In each generation, four individuals are randomly selected as a subset, from which the top two individuals with the best fitness scores are chosen as parents. These parents undergo cycle crossover and swap mutation to generate offspring. The fitness of both parents and offspring is compared, and the top ten individuals are selected to proceed to the next generation. This process is repeated for 1000 generations.
 
-- **Experiments and parameters**:  
-  These parameters are effective for both 8-queen and 50-queen problems, so no changes were made in the experiments.
